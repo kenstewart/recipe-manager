@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Recipe LIST page</h1>
+
+    <ul>
+        {% for recipe in recipes %}
+            <li>
+                ID = {{ recipe.recipeId }}
+                <br>
+                Title = {{ recipe.title }}
+                <br>
+                Summary = {{ recipe.summary }}
+                <br>
+                1st ingredient = {{ recipe.ingredient1 }}
+                <br>
+                2nd ingredient = {{ recipe.ingredient2 }}
+                <br>
+                3rd ingredient = {{ recipe.ingredient3 }}
+                <br>
+                4th ingredient = {{ recipe.ingredient4 }}
+                <br>
+                Step 1 = {{ recipe.step1 }}
+                <br>
+                Step 2 = {{ recipe.step2 }}
+                <br>
+                Step 3 = {{ recipe.step3 }}
+                <br>
+                Step 4 = {{ recipe.step4 }}
+                <br>
+                Author = {{ recipe.author }}
+                <br>
+                Comments = {{ recipe.comments }}
+                <br>
+                {#<a href="{{ url('recipe_show', {ID : recipe.recipeId}) }}">(details)</a>#}
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

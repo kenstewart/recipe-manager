@@ -10,10 +10,10 @@ class DefaultController extends Controller
     /**
      * @Route("/", name="homepage")
      */
-    public function index()
+    public function indexAction()
     {
-        return $this->render('default/index.html.twig', [
-            'controller_name' => 'DefaultController',
-        ]);
+        $template = 'default/homepage.html.twig';
+        $args = [];
+        return $this->render($template, $args);
     }
 }

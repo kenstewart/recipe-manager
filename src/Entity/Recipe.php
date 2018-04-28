@@ -1,13 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ken
- * Date: 08/04/2018
- * Time: 19:23
- */
 
 namespace App\Entity;
 
+use App\Repository\RecipeRepository;
 
 class Recipe
 {
