@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block pageTitle %}New Recipe Form{% endblock %}
+
+{% block body %}
+    <h1>Add new recipe</h1>
+
+    {% for flash_message in app.session.flashBag.get('error') %}
+        <div class="flash-error">
+            {{ flash_message }}
+        </div>
+    {% endfor %}
+
+    <form action="/recipe/processNewForm" METHOD="post">
+            Title:
+            <input type="text" name="title" value="">
+        <p>
+            Summary:
+            <input type="text" name="summary" value="">
+        <p>
+            1st ingredient:
+            <input type="text" name="ingredient1" value="">
+        <p>
+            2nd ingredient:
+            <input type="text" name="ingredient2" value="">
+        <p>
+            3rd ingredient:
+            <input type="text" name="ingredient3" value="">
+        <p>
+            4th ingredient:
+            <input type="text" name="ingredient4" value="">
+        <p>
+            Step 1:
+            <input type="text" name="Step1" value="">
+        <p>
+            Step 2:
+            <input type="text" name="Step2" value="">
+        <p>
+            Step 3:
+            <input type="text" name="Step3" value="">
+        <p>
+            Step 4:
+            <input type="text" name="Step4" value="">
+        <p>
+            Author:
+            <input type="text" name="author" value="">
+        <p>
+            Comments:
+            <input type="text" name="comments" value="">
+        <p>
+            <input type="submit" value="Create new recipe">
+    </form>
+
+{% endblock %}

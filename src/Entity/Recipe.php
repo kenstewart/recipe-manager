@@ -3,22 +3,96 @@
 namespace App\Entity;
 
 use App\Repository\RecipeRepository;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Class Recipe
+ * @package App\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\RecipeRepository")
+ */
 
 class Recipe
 {
+    /**
+     * @var
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
     private $recipeId;
+
+    /**
+     * @var
+     * @ORM\Column(type="string")
+     */
     private $title;
+
+    /**
+     * @var
+     * @ORM\Column(type="string")
+     */
     private $summary;
+
+    /**
+     * @var
+     * @ORM\Column(type="string")
+     */
     private $ingredient1;
+
+    /**
+     * @var
+     * @ORM\Column(type="string")
+     */
     private $ingredient2;
+
+    /**
+     * @var
+     * @ORM\Column(type="string")
+     */
     private $ingredient3;
+
+    /**
+     * @var
+     * @ORM\Column(type="string")
+     */
     private $ingredient4;
+
+    /**
+     * @var
+     * @ORM\Column(type="string")
+     */
     private $step1;
+
+    /**
+     * @var
+     * @ORM\Column(type="string")
+     */
     private $step2;
+
+    /**
+     * @var
+     * @ORM\Column(type="string")
+     */
     private $step3;
+
+    /**
+     * @var
+     * @ORM\Column(type="string")
+     */
     private $step4;
+
+    /**
+     * @var
+     * @ORM\Column(type="string")
+     */
     private $author;
+
+    /**
+     * @var
+     * @ORM\Column(type="string")
+     */
     private $comments;
+
 
     /**
      * @return mixed
